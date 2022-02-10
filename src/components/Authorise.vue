@@ -101,7 +101,7 @@ export default {
       const queryBody = new URLSearchParams(fetchData).toString()
 
       const clientDetails = btoa(
-        `${this.auth.clientId}:${this.auth.clientSecret}`
+        `${790dfe2c758f4390a0ff435f2b6fdc0c}:${this.auth.clientSecret}`
       )
 
       const res = await fetch(`${this.endpoints.token}`, {
