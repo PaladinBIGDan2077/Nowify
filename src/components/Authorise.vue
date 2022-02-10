@@ -101,7 +101,7 @@ export default {
       const queryBody = new URLSearchParams(fetchData).toString()
 
       const clientDetails = btoa(
-        `${790dfe2c758f4390a0ff435f2b6fdc0c}:${this.auth.clientSecret}`
+        `${this.auth.clientId}:${this.auth.clientSecret}`
       )
 
       const res = await fetch(`${this.endpoints.token}`, {
@@ -179,7 +179,7 @@ export default {
      */
     setAuthUrl() {
       searchParams.toString()
-      searchParams.append('client_id', '790dfe2c758f4390a0ff435f2b6fdc0c')
+      searchParams.append('client_id', this.auth.clientId)
       searchParams.append('response_type', 'code')
       searchParams.append('redirect_uri', window.location.origin)
       searchParams.append(
